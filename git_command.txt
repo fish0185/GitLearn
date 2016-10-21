@@ -77,9 +77,13 @@ git reset --soft HEAD~1 (undo last commit - move changes to staging area)
 git reset --hard  /*remove all changes*/
 git reset --soft HEAD~1  /*revert last change, still able to change*/
 git reset --hard HEAD~1  /*remove last commit*/
+git reset <file> // You can undo git add before commit with
+git reset //which will remove it from the current index (the "about to be committed" list) without changing anything 
+
 git push --force origin feature/csvgenerator
 git rm src/Api/Controllers/filename.cs -f
 
+git remote update
 
 git rebase --continue
 git mergetool
@@ -98,3 +102,11 @@ git push origin feature/csvgenerator
 git push origin feature/csvgenerator --force /*not doing this in master*/
 git push origin ZIPDEV-1586:feature/zipdev-1586-show-payment-info-for-NZ-payments-service  (push local branch[ZIPDEV-1586] to remote + create a remote branch[origin/feature/zipdev-1586-show-payment-info-for-NZ-payments-service])
 git push origin feature/csvgenerator (push local branch[which you are in] to remote branch -- origin means remote destination)
+
+# If you already have a file checked in, and you want to ignore it, Git will not ignore the file if you add a rule later. In those cases, you must untrack the file first, by running the following command in your terminal:
+# http://stackoverflow.com/questions/1470572/gitignore-ignore-any-bin-directory
+git rm --cached
+git rm --cached -r .
+git add .
+# end of 
+

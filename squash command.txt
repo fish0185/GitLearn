@@ -1,0 +1,10 @@
+1) identify how many commit you want to squash to 1
+2) let's say 3 
+3) git rebase -i HEAD~3
+4) popup window to adjust the commit , i want to squash to commit, so changing the flowing commit from pick to s
+see image.
+5) save and exit 
+6) another title pop up, you can modify the messages, rember remove old commit messsage
+7) done the local commit
+8) git push origin localbranchName:remotebranchname -f
+9) done

@@ -1,0 +1,2 @@
+1) git reabse origin/master (pull origin's master branch to my current opening branch)
+2) check conflict. go to source tree. refresh and then select your commit. conflict file will be list on the bottom. right click the file and select resolve. start edit confict. save 
