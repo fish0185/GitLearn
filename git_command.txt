@@ -1,0 +1,99 @@
+git init 
+echo "xxx">ReadMe.txt
+git status
+git add ReadMe.txt
+git commit -m "xxxx"
+git commit --amend
+git log
+git add -u
+git diff dd68lq....a12ec6
+git diff HEAD~1...HEAD
+git diff HEAD~1...
+git add -A
+git checkout => pull out from the repository by default grab the head version
+cat filename
+
+git stash
+git stash list 
+git stash pop
+git stash apply (apply the saved stash without remove it)
+
+git checkout feature/csvgenerator  /**/
+git pull -r origin master
+
+git conifg --global user.name "Sam Smith"
+git config --global user.email sam@example.com
+
+git add *
+
+git remote add origin <server>
+git remote -v
+
+git clone /path/to/repository
+git clone username@host:/path/to/repository
+git clone https://github.com/jquery/jquery.git
+
+git log --oneline --graph --all --decorate
+git log --oneline
+git log --oneline | wc -l (word count function with the -l to count line by line)
+git log --oneline --graph
+git log --format=short 
+git shortlog
+git shortlog -sne
+git show HEAD (last commited)
+git show HEAD~1
+git show adf2342 (show commited by hash)
+
+git remote (show that we have got one remote called origin, origin is just the git defautl name for where this souce came from)
+git remote -v
+
+//local repository that i want to add to remote destnation
+git remote add origin https://github.com/fish0185/GitTest.git (origin is random name, you can named it anything)
+git remote rm origin (remote origin)
+git fetch (pull down from remote repository)
+git fetch origin (petch form specific remote)
+git log orign/master (here show the remote branch orign/master 's log)
+git merge origin/master (specify the merging from origin master int to my current branch called master)
+
+git fetch; git merge origin/master ==== git pull
+git pull -r origin master (grab latest source code from orign's master branch and rebase)
+git branch --set-upstream master origin/master
+git pull origin master (this case you dont need to setup upstream)
+
+git rebase --abort (revert rebase)
+git rebase --continue
+
+//view branches and tags
+git branch (display all branches - local)
+git branch -r (remote branches)
+git checkout -b ZIPDEV-1586 (create a local branch also do a switch to that branch)
+git branch -d Zipdev-1598 (delete branch)
+git branch -D zipdev-1589 (forece delete branch)
+
+git checkout filename (checkout the file from last commited)
+git reset --hard HEAD~1 (delete that last commit)
+git reset --soft HEAD~1 (undo last commit - move changes to staging area)
+git reset --hard  /*remove all changes*/
+git reset --soft HEAD~1  /*revert last change, still able to change*/
+git reset --hard HEAD~1  /*remove last commit*/
+git push --force origin feature/csvgenerator
+git rm src/Api/Controllers/filename.cs -f
+
+
+git rebase --continue
+git mergetool
+
+git tag (these are stable points, these are known points in your code base where you can ofen tag verion)
+git tag v1.0 (add tag)
+git tag (view tag)
+git tag -a V1.1 (create V1.1 with message)
+git tag -s v1.2 (try to sign a tag)
+git tag -v v1.2 (vertig the tag)
+git push --tags (push with tag)
+
+git rebase -i HEAD~2 (squash commit)
+
+git push origin feature/csvgenerator
+git push origin feature/csvgenerator --force /*not doing this in master*/
+git push origin ZIPDEV-1586:feature/zipdev-1586-show-payment-info-for-NZ-payments-service  (push local branch[ZIPDEV-1586] to remote + create a remote branch[origin/feature/zipdev-1586-show-payment-info-for-NZ-payments-service])
+git push origin feature/csvgenerator (push local branch[which you are in] to remote branch -- origin means remote destination)
