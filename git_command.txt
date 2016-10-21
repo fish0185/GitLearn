@@ -69,6 +69,7 @@ git branch -r (remote branches)
 git checkout -b ZIPDEV-1586 (create a local branch also do a switch to that branch)
 git branch -d Zipdev-1598 (delete branch)
 git branch -D zipdev-1589 (forece delete branch)
+git branch -r -d origin/update/u1 (delete remote branch)
 
 git checkout filename (checkout the file from last commited)
 git reset --hard HEAD~1 (delete that last commit)
