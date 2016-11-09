@@ -60,6 +60,8 @@ git pull -r origin master (grab latest source code from orign's master branch an
 git branch --set-upstream master origin/master
 git pull origin master (this case you dont need to setup upstream)
 
+git pull --rebase origin master (fetch orgin and rebase your current branch onto the top http://gitolite.com/git-pull--rebase)
+git rebase origin/master (get remote source and apply to current branch)
 git rebase --abort (revert rebase)
 git rebase --continue
 
@@ -73,8 +75,8 @@ git branch -r -d origin/update/u1 (delete remote branch)
 
 git checkout filename (checkout the file from last commited)
 git reset --hard HEAD~1 (delete that last commit)
-git reset --soft HEAD~1 (undo last commit - move changes to staging area)
-git reset --hard  /*remove all changes*/
+git --soft HEAD~1 (undo last commit - move changes to staging area)
+git reset --hard  /*remove all changes and take from previous commit*/
 git reset --soft HEAD~1  /*revert last change, still able to change*/
 git reset --hard HEAD~1  /*remove last commit*/
 git reset <file> // You can undo git add before commit with
@@ -86,6 +88,7 @@ git rm src/Api/Controllers/filename.cs -f
 git remote update
 
 git rebase --continue
+
 git mergetool
 
 git tag (these are stable points, these are known points in your code base where you can ofen tag verion)
@@ -97,6 +100,7 @@ git tag -v v1.2 (vertig the tag)
 git push --tags (push with tag)
 
 git rebase -i HEAD~2 (squash commit)
+
 
 git push origin feature/csvgenerator
 git push origin feature/csvgenerator --force /*not doing this in master*/
@@ -110,3 +114,5 @@ git rm --cached -r .
 git add .
 # end of 
 
+git fetch (now origin/master is up to date)
+git rebase origin/master (reabase or merge my local branch with these changes)
