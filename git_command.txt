@@ -11,6 +11,7 @@ git diff HEAD~1...HEAD
 git diff HEAD~1...
 git add -A
 git checkout => pull out from the repository by default grab the head version
+git checkout 54560a3 
 cat filename
 
 git stash
@@ -21,7 +22,7 @@ git stash apply (apply the saved stash without remove it)
 git checkout feature/csvgenerator  /**/
 git pull -r origin master
 
-git conifg --global user.name "Sam Smith"
+git conifg --global user.name "Sam Smith" (--global flag tells Git to use this configuration as a default for all of your repositories)
 git config --global user.email sam@example.com
 
 git add *
@@ -38,6 +39,8 @@ git log --oneline
 git log --oneline | wc -l (word count function with the -l to count line by line)
 git log --oneline --graph
 git log --format=short 
+git log --oneline blue.html (this display only the blue.html history)
+
 git shortlog
 git shortlog -sne
 git show HEAD (last commited)
@@ -76,11 +79,13 @@ git branch -r -d origin/update/u1 (delete remote branch)
 git checkout filename (checkout the file from last commited)
 git reset --hard HEAD~1 (delete that last commit)
 git --soft HEAD~1 (undo last commit - move changes to staging area)
-git reset --hard  /*remove all changes and take from previous commit*/
+git reset --hard  /*remove all changes and take from previous commit*/ (this changes all tracked files to mathc the most recnet commit)
 git reset --soft HEAD~1  /*revert last change, still able to change*/
 git reset --hard HEAD~1  /*remove last commit*/
 git reset <file> // You can undo git add before commit with
 git reset //which will remove it from the current index (the "about to be committed" list) without changing anything 
+git revert 514fbe7  (git revert command requires a commit id to undo) (git revert saves the commit in case you want to come back to it later)
+
 
 git push --force origin feature/csvgenerator
 git rm src/Api/Controllers/filename.cs -f
@@ -98,6 +103,9 @@ git tag -a V1.1 (create V1.1 with message)
 git tag -s v1.2 (try to sign a tag)
 git tag -v v1.2 (vertig the tag)
 git push --tags (push with tag)
+git tag -a v1.0 -m "Stable version of the website" (-a flag tells git to create an annotated tag, which lets us record our name, the date, and a descriptive message(specified via -m flag))
+
+git checkout v1.0 (checout a tag)
 
 git rebase -i HEAD~2 (squash commit)
 
@@ -116,3 +124,9 @@ git add .
 
 git fetch (now origin/master is up to date)
 git rebase origin/master (reabase or merge my local branch with these changes)
+
+git pull -r origin master 
+
+working direcotry, stagred snapshot, committed snapshots is at the very core of Git Version control
+
+git clean -f  (this will remove all untracked files)
