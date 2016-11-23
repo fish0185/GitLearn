@@ -58,7 +58,7 @@ git fetch origin (petch form specific remote)
 git log orign/master (here show the remote branch orign/master 's log)
 git merge origin/master (specify the merging from origin master int to my current branch called master)
 
-git fetch; git merge origin/master ==== git pull
+git fetch; git merge origin/master ==== git pull  (will update and merge any remote changes of the current branch you're on.)
 git pull -r origin master (grab latest source code from orign's master branch and rebase)
 git branch --set-upstream master origin/master
 git pull origin master (this case you dont need to setup upstream)
@@ -90,7 +90,7 @@ git revert 514fbe7  (git revert command requires a commit id to undo) (git rever
 git push --force origin feature/csvgenerator
 git rm src/Api/Controllers/filename.cs -f
 
-git remote update
+git remote update (will update all of your branches set to track remote ones, but not merge any changes in.)
 
 git rebase --continue
 
@@ -122,7 +122,7 @@ git rm --cached -r .
 git add .
 # end of 
 
-git fetch (now origin/master is up to date)
+git fetch (will update only the branch you're on, but not merge any changes in.)
 git rebase origin/master (reabase or merge my local branch with these changes)
 
 git pull -r origin master 
