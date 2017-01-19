@@ -133,3 +133,11 @@ git pull -r origin master
 working direcotry, stagred snapshot, committed snapshots is at the very core of Git Version control
 
 git clean -f  (this will remove all untracked files)
+
+// Cherry picking in git means to choose a commit from one branch and apply it onto another
+// this is in contrast with other ways such as merge and rebase which normally applies many commits onto a another branch
+
+1. Make suer you are on the branch you want apply the commit to.
+git checkout master
+2. Execute 
+git cherry-pick <commit-hash>
