@@ -141,3 +141,4 @@ git clean -f  (this will remove all untracked files)
 git checkout master
 2. Execute 
 git cherry-pick <commit-hash>
+git checkout -b test origin/master  (create a local copy name test of origin/master)
