@@ -141,3 +141,5 @@ git clean -f  (this will remove all untracked files)
 git checkout master
 2. Execute 
 git cherry-pick <commit-hash>
+
+git checkout -b newBranchName origin/master (checkout remote master to new branch called newBranchName)
