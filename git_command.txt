@@ -40,7 +40,7 @@ git log --oneline | wc -l (word count function with the -l to count line by line
 git log --oneline --graph
 git log --format=short 
 git log --oneline blue.html (this display only the blue.html history)
-git log oldbranch ^newbranch --no-merges (show commit in oldbranch but not in newbranch)
+git log oldbranch ^newbranch --no-merges (show commit in oldbranch but not in newbranch) //https://stackoverflow.com/questions/1710894/using-git-show-all-commits-that-are-in-one-branch-but-not-the-others
 
 
 git shortlog
