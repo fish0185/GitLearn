@@ -77,6 +77,8 @@ git checkout -b ZIPDEV-1586 (create a local branch also do a switch to that bran
 git branch -d Zipdev-1598 (delete branch)
 git branch -D zipdev-1589 (forece delete branch)
 git branch -r -d origin/update/u1 (delete remote branch)
+git branch -m new-name // rename your local branch, if you are on the branch you want to rename
+git branch -m old-name new-name // rename local branch, if you are on a different branch
 
 git checkout filename (checkout the file from last commited)
 git reset --hard HEAD~1 (delete that last commit)
