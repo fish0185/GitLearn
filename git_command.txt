@@ -89,7 +89,13 @@ git reset --hard HEAD~1  /*remove last commit*/
 git reset <file> // You can undo git add before commit with
 git reset //which will remove it from the current index (the "about to be committed" list) without changing anything 
 git revert 514fbe7  (git revert command requires a commit id to undo) (git revert saves the commit in case you want to come back to it later)
-
+//https://stackoverflow.com/questions/927358/how-to-undo-the-last-commits-in-git?page=3&tab=active#tab-top
+// revert change 
+git revert commit-id
+// if conflict just use git mergetool resolve conflict 
+// git add -A
+// git commit -m 'revert change Feature-123'
+// Create a pr the origin master
 
 git push --force origin feature/csvgenerator
 git rm src/Api/Controllers/filename.cs -f
