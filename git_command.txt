@@ -59,6 +59,8 @@ git fetch (pull down from remote repository)
 git fetch origin (petch form specific remote)
 git log orign/master (here show the remote branch orign/master 's log)
 git merge origin/master (specify the merging from origin master int to my current branch called master)
+git reset --merge // will abort a merge 
+git merge --abort // same as above, alias 
 
 git fetch; git merge origin/master ==== git pull  (will update and merge any remote changes of the current branch you're on.)
 git pull -r origin master (grab latest source code from orign's master branch and rebase)
