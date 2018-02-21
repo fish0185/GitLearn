@@ -167,3 +167,6 @@ git checkout -b newBranchName origin/master (checkout remote master to new branc
 
 // git push with username and passowrd https://stackoverflow.com/questions/29776439/username-and-password-in-command-for-git-push
 git push https://username:password@bitbucket.org/xxxx/nodetolambda.git/
+
+// find git config localtion
+git config --list --show-origin
