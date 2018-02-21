@@ -165,3 +165,5 @@ git checkout -b newBranchName origin/master (checkout remote master to new branc
 1. git stash list // list of stashed 
 2. git stash apply stash@{x} // x is the stash you want to apply, last one is 0, second last is 1, ect...
 
+// git push with username and passowrd https://stackoverflow.com/questions/29776439/username-and-password-in-command-for-git-push
+git push https://username:password@bitbucket.org/xxxx/nodetolambda.git/
