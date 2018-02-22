@@ -170,3 +170,11 @@ git push https://username:password@bitbucket.org/xxxx/nodetolambda.git/
 
 // find git config localtion
 git config --list --show-origin
+
+// how to merge lots commit to new branch
+1. checkout the new branch
+e.g. git checkout master
+2. git merge relase/1.0
+3. git mergetool incase conflit
+// finish merge
+4. git merge --continue  or git commit 
