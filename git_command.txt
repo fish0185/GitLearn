@@ -178,3 +178,9 @@ e.g. git checkout master
 3. git mergetool incase conflit
 // finish merge
 4. git merge --continue  or git commit 
+
+// git bash keep ask for user crediential #########
+git config credential.helper store
+git pull
+* add your password
+// ################################################
