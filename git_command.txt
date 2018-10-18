@@ -186,3 +186,6 @@ git config credential.helper store
 git pull
 * add your password
 // ################################################
+
+//https://stackoverflow.com/questions/12144633/explain-which-gitignore-rule-is-ignoring-my-file
+git check-ignore -v filename
